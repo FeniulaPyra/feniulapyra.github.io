@@ -36,7 +36,7 @@ let app = new Vue({
 				description: `A simple Homework Planner site I made for myself. It uses the 
 								Google Sheets API to help me track my homework. Functional, 
 								but the UI is still WIP.`,
-				img: "homework-tool.PNG",
+				img: "homework-tool.png",
 				link: "",
 				download: "",
 				code: ""
