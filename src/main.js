@@ -33,13 +33,13 @@ let app = new Vue({
 			},
 			"Homework Tool" : {
 				name: "Homework Tool",
-				description: `A simple Homework Planner site I made for myself. It uses the 
-								Google Sheets API to help me track my homework. Functional, 
-								but the UI is still WIP.`,
-				img: "homework-tool.png",
-				link: "",
+				description: `A Homework Todolist tool I created using Vue.js, a DnD api, and
+							  the Google Firebase Realtime Database and Authentication API's, 
+							  inspired by the website/app Habitica.`,
+				img: "homework-tool-new.png",
+				link: "https://people.rit.edu/lep2738/330/projects/project-3/index.html",
 				download: "",
-				code: ""
+				code: "https://github.com/FeniulaPyra/homework-todo-list"
 			},
 			"Disney Tsum Tsum Search" : {
 				name: "Disney Tsum Tsum Search",
