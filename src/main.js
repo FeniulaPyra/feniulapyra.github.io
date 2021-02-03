@@ -58,7 +58,7 @@ let app = new Vue({
 				img: "aliencereal.png",
 				link: "https://people.rit.edu/lep2738/235/project-3/game/game.html",
 				download: "",
-				code: ""
+				code: "https://github.com/FeniulaPyra/alien-cereal"
 			},
 			"That's The Tea" : {
 				name: "That's The Tea",
@@ -67,6 +67,15 @@ let app = new Vue({
 				img: "thats-the-tea.png",
 				link: "",
 				download: "files/thats-the-tea.zip",
+				code: ""
+			},
+			"HvZ" : {
+				name: "HvZ",
+				description: `A simulation for zombies chasing and converting humans demonstrating 
+							  the evasion and pursuit of autonomous agents.`,
+				img: "hvz.png",
+				link: "",
+				download: "files/hvz.zip",
 				code: ""
 			}
 			
