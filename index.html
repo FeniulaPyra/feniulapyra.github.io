@@ -1,161 +1,151 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Lars Puglise</title>
-        <meta charset="utf-8">
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim&display=swap">
-		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/portfolio-css.css">
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="src/loader.js" type="module"></script>
-    </head>
-    <body>
-        <div id="topbar">
-            <header><img src="imgs/my_logo.svg"><h1>Lars Puglise</h1></header>
-            <nav id="desktopNav">
-                <a href="#aboutL">About Me</a>
-                <a href="#galleryL">Gallery</a>
-                <a href="#skillsL">Skills</a>
-                <a href="#contactL">Resume/Contact</a>
-            </nav>
-			<details id="mobileNav">
-				<summary>☰</summary>
-					<nav>
-						<a href="#aboutL">About Me</a>
-						<a href="#galleryL">Gallery</a>
-						<a href="#skillsL">Skills</a>
-						<a href="#contactL">Resume/Contact</a>
-					</nav>
-			</details>
+  <head>
+    <title>Lars Puglise</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio-css.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="src/loader.js" type="module"></script>
+  </head>
+  <body>
+    <div id="topbar">
+      <header><img src="imgs/my_logo.svg"><h1>Lars Puglise</h1></header>
+      <nav id="desktopNav">
+        <a href="#aboutL">About Me</a>
+        <a href="#galleryL">Gallery</a>
+        <a href="#skillsL">Skills</a>
+        <a href="#contactL">Resume/Contact</a>
+      </nav>
+      <details id="mobileNav">
+        <summary>☰</summary>
+        <nav>
+          <a href="#aboutL">About Me</a>
+          <a href="#galleryL">Gallery</a>
+          <a href="#skillsL">Skills</a>
+          <a href="#contactL">Resume/Contact</a>
+        </nav>
+      </details>
+    </div>
+    <main>
+      <h2 id="aboutL">About Me</h2>
+      <section id="about">
+        <img src="imgs/lars.jpeg">
+        <p>
+          Hi there! I am Lars Puglise, a 3rd Year Game Design student who works
+          with JavaScript, C#, Java, SQL and lots more! I've wanted to develop 
+          games since I was about 9 years old, and I've recently discovered a 
+          passion for front-end web development. I'm currently working on a board 
+          game called "That's the Tea" and various websites. 
+        </p>
+      </section>
+
+      <br>
+      <h2 id="galleryL">Gallery</h2>
+      <section id="projectInfo">
+
+        <div id="gallerySelection">
+          <span v-for="project in projects">
+            <input type="radio" name="project" 
+                   v-bind:value="project.name" 
+                   v-bind:id="project.name.replace(' ', '')"
+                   v-model="selected">
+            <label v-bind:for="project.name.replace(' ', '')"><img v-bind:src="'imgs/' + project.img"></label>
+          </span>
         </div>
-        <main>
-            <h2 id="aboutL">About Me</h2>
-            <section id="about">
-                <img src="imgs/lars.jpeg">
-                <p>
-                    Hi there! I am Lars Puglise, a 3rd Year Game Design student who works
-					with JavaScript, C#, Java, SQL and lots more! I've wanted to develop 
-					games since I was about 9 years old, and I've recently discovered a 
-					passion for front-end web development. I'm currently working on a board 
-					game called "That's the Tea" and various websites. 
-                </p>
-            </section>
-            
-            <br>
-            <h2 id="galleryL">Gallery</h2>
-			<section id="projectInfo">
-				
-				<div id="gallerySelection">
-					<span v-for="project in projects">
-						<input type="radio" name="project" 
-							   v-bind:value="project.name" 
-							   v-bind:id="project.name.replace(' ', '')"
-							   v-model="selected">
-						<label v-bind:for="project.name.replace(' ', '')"><img v-bind:src="'imgs/' + project.img"></label>
-					</span>
-				</div>
-				
-				<p id="projectImg" v-bind:style="'background-image: url(imgs/' + projects[selected].img + ')'">
-				<h3>{{projects[selected].name}}</h3>
-				<p>
-					{{projects[selected].description}}
-					<br>
-					<br>
-					<a v-bind:href="projects[selected].link" v-if="projects[selected].link != ''">Visit!</a>
-					<a v-bind:href="projects[selected].download" download v-if="projects[selected].download != ''">Download!</a>
-					<br>
-					<a v-bind:href="projects[selected].code" v-if="projects[selected].code != ''">View the Code!</a>
-				</p>
-			</section>
-			
-			<br>
-			<h2 id="skillsL">Skills</h2>
-			<section id="skills">
-				<div id="langs">
-					<h3>Languages</h3>
-					<hr>
-					<ul>
-						<li>JavaScript</li>
-						<li>HTML/CSS</li>
-						<li>SQL</li>
-						<li>C#</li>
-						<li>Java</li>
-						<li>C++</li>
-					</ul>
-				</div>
-				
-				<br>
-				
-				<div id="tools">
-					<h3>Tools</h3>
-					<hr>
-					<ul>
-						<li>Unity</li>
-						<li>Gamemaker 1.4</li>
-					</ul>
-				</div>
-				
-				<br>
-				
-				<div id="apis">
-					<h3>Web APIs</h3>
-					<hr>
-					<ul>
-						<li>Vue.js</li>
-						<li>Google Firebase API</li>
-						<li>Google Sheets API</li>
-						<li>Canvas API</li>
-						<li>WebAudio API</li>
-						<li>PixiJS</li>
-						<li>MediaWiki</li>
-						<li>MatterJS</li>
-						<li>Mapbox</li>
-					</ul>
-				</div>
-				
-				<br>
-				
-				<div id="also">
-					<h3>Also...</h3>
-					<hr>
-					<ul>
-						<li>Monogame Framework</li>
-						<li>A little bit of Unreal Engine</li>
-						<li>SQLite</li>
-					</ul>
-				</div>
-			</section>
-			
-			
-            <br>
-            <h2 id="contactL">Contact</h2>
-            <section id="contact">
-                <h3>Email</h3>
-                <hr>
-                <a href="lars.puglise@gmail.com">lars.puglise@gmail.com</a>
-                <br>
-                <br>
-                
-                <h3>Phone</h3>
-                <hr>
-                <p>719 229 5083</p>
-                <br>
-                
-                <h3>Social Media</h3>
-                <hr>
-                <a href="https://www.linkedin.com/in/lauren-puglise/">LinkedIn</a> |
-                <a href="https://app.joinhandshake.com/users/13463483">Handshake</a>
-				<br>
-				<br>
-				
-				<h3>Resume</h3>
-				<hr>
-				<a href="files/lauren-puglise-resume.pdf">Open</a> |
-				<a href="files/lauren-puglise-resume.pdf" download>Download</a>
-            </section>
-        </main>
-        
-    </body>
+
+        <p id="projectImg" v-bind:style="'background-image: url(imgs/' + projects[selected].img + ')'">
+        <h3>{{projects[selected].name}}</h3>
+        <p>
+          {{projects[selected].description}}
+          <br>
+          <br>
+          <a v-bind:href="projects[selected].link" v-if="projects[selected].link != ''">Visit!</a>
+          <a v-bind:href="projects[selected].download" download v-if="projects[selected].download != ''">Download!</a>
+          <br>
+          <a v-bind:href="projects[selected].code" v-if="projects[selected].code != ''">View the Code!</a>
+        </p>
+      </section>
+
+      <br>
+      <h2 id="skillsL">Skills</h2>
+      <section id="skills">
+        <div id="langs">
+          <h3>Languages</h3>
+            <hr>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+              <li>SQL</li>
+              <li>C#</li>
+              <li>Java</li>
+              <li>C++</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div id="tools">
+          <h3>Tools/Systems</h3>
+          <hr>
+          <ul>
+            <li>Unity</li>
+            <li>Gamemaker 1.4</li>
+            <li>SQLite</li>
+          </ul>
+        </div>
+
+        <br>
+
+        <div id="apis">
+          <h3>APIs and Frameworks</h3>
+          <hr>
+          <ul>
+            <li>Vue.js</li>
+            <li>Google Firebase API</li>
+            <li>Google Sheets API</li>
+            <li>Canvas API</li>
+            <li>WebAudio API</li>
+            <li>PixiJS</li>
+            <li>MediaWiki</li>
+            <li>MatterJS</li>
+            <li>Mapbox</li>
+            <li>Monogame</li>
+          </ul>
+        </div>
+
+        <br>
+      </section>
+      <br>
+      <h2 id="contactL">Contact</h2>
+      <section id="contact">
+        <h3>Email</h3>
+        <hr>
+        <a href="lars.puglise@gmail.com">lars.puglise@gmail.com</a>
+        <br>
+        <br>
+
+        <h3>Phone</h3>
+        <hr>
+        <p>719 229 5083</p>
+        <br>
+
+        <h3>Social Media</h3>
+        <hr>
+        <a href="https://www.linkedin.com/in/lauren-puglise/">LinkedIn</a> |
+        <a href="https://app.joinhandshake.com/users/13463483">Handshake</a>
+        <br>
+        <br>
+
+        <h3>Resume</h3>
+        <hr>
+        <a href="files/lauren-puglise-resume.pdf">Open</a> |
+        <a href="files/lauren-puglise-resume.pdf" download>Download</a>
+      </section>
+    </main>
+
+  </body>
 </html>
