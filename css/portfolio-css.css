@@ -101,6 +101,7 @@ h2 {
 #about img {
   margin: auto;
   max-width: 50vw;
+  max-height: 10rem;
 }
 
 #gallerySelection {
