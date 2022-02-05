@@ -77,8 +77,16 @@ let app = new Vue({
 				link: "",
 				download: "files/hvz.zip",
 				code: ""
-			}
-			
+            },
+          /*
+            "Cow-a-bug-a!" : {
+              name: "Cow-a-bug-a!",
+              description: ``,
+              img: "",
+              link: "",
+              code: "",
+            }
+            */
 		},
 		selected: "Plant World Generator"
 	},
