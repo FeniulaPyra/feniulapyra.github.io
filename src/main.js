@@ -14,18 +14,29 @@ let app = new Vue({
 			"Audio Visualizer" : {
 				name: "Audio Visualizer",
 				description: `A site that visualizes a user-selected or preset song in a 
-								pixelated witch hut using bitmap effects and audio effects. 
-								Uses JS and the WebAudio API.`,
+                              pixelated witch hut using bitmap effects and audio effects. 
+                              Uses JS and the WebAudio API.`,
 				img: "visualizer.png",
 				link: "https://people.rit.edu/lep2738/330/projects/project-2/index.html",
 				download: "",
 				code: "https://github.com/FeniulaPyra/330-project-2"
 			},
+            "Cow-a-bug-a!" : {
+              name: "Cow-a-bug-a!",
+              description: `A pet simulator game! Create bug cows and make sure to pet them, feed them, 
+                            and "milk" them for honey every day! Make sure to buy them cute accessories
+                            too! Part of the reason for this project was to learn more about databases,
+                            servers, and user logins/password storage.`,
+              img: "cow-a-bug-a.png",
+              download: "",
+              link: "https://lep2738-cow-a-bug-a.herokuapp.com/",
+              code: "",
+            },
 			"RPS: The Odyssey" : {
 				name: "RPS: The Odyssey",
 				description: `A platformer where the main form of combat is 
-								rock-paper-scissors-lizard-spock. Made with a group. Written
-								in C# and uses monogame.`,
+                              rock-paper-scissors-lizard-spock. Made with a group. Written
+                              in C# and uses monogame.`,
 				img: "rps-the-odyssey.png",
 				link: "",
 				download: "files/rps-the-odyssey.zip",
@@ -44,8 +55,8 @@ let app = new Vue({
 			"Disney Tsum Tsum Search" : {
 				name: "Disney Tsum Tsum Search",
 				description: `A website that finds characters from the mobile game, 
-								<em>Disney Tsum Tsum</em>, using tags picked by the user. Uses Ajax 
-								HTML requests paired with the CORS-Anywhere and Wikia API.`,
+                              "Disney Tsum Tsum", using tags picked by the user. Uses Ajax 
+                              HTML requests paired with the CORS-Anywhere and Wikia API.`,
 				img: "disney-tsum-tsum-pic.PNG",
 				link: "https://people.rit.edu/lep2738/tsum-searcher/index.html",
 				download: "",
@@ -78,15 +89,7 @@ let app = new Vue({
 				download: "files/hvz.zip",
 				code: ""
             },
-          /*
-            "Cow-a-bug-a!" : {
-              name: "Cow-a-bug-a!",
-              description: ``,
-              img: "",
-              link: "",
-              code: "",
-            }
-            */
+            
 		},
 		selected: "Plant World Generator"
 	},
