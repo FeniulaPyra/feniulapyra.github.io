@@ -82,8 +82,8 @@ let app = new Vue({
 			},
 			"HvZ" : {
 				name: "HvZ",
-				description: `A simulation for zombies chasing and converting humans demonstrating 
-							  the evasion and pursuit of autonomous agents.`,
+				description: `A simulation for zombies(cats) chasing and converting humans(ducks) 
+                              demonstrating the evasion and pursuit of autonomous agents.`,
 				img: "hvz.png",
 				link: "",
 				download: "files/hvz.zip",
