@@ -129,7 +129,7 @@ let app = new Vue({
       }
       
     },
-    selected: "Plant World Generator"
+    selected: "Mushrune"
   },
   methods: {
     getBG(projectImg) {
