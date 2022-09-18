@@ -2,16 +2,6 @@ let app = new Vue({
   el: "main",
   data: {
     projects: {
-      "Plant World Generator" : {
-        name: "Plant World Generator",
-        description: `An interactive media experience which generates a world of 
-                      user-designed computer-generated flowers.`,
-        img: "plant-world.png",
-        link: "https://people.rit.edu/lep2738/330/projects/project-1/index.html",
-        download: "",
-        code: "https://github.com/FeniulaPyra/330-project-1",
-        tags: "game web"
-      },
       Mushrune: {
         name:"Mushrune",
         description: `A farming simulation game with a unique growth mechanic that allows 
@@ -21,6 +11,16 @@ let app = new Vue({
         download: "mushrune.zip",
         code: "",
         tags: "game"
+      },
+      "Plant World Generator" : {
+        name: "Plant World Generator",
+        description: `An interactive media experience which generates a world of 
+                      user-designed computer-generated flowers.`,
+        img: "plant-world.png",
+        link: "https://people.rit.edu/lep2738/330/projects/project-1/index.html",
+        download: "",
+        code: "https://github.com/FeniulaPyra/330-project-1",
+        tags: "simulation web"
       },
       "Audio Visualizer" : {
         name: "Audio Visualizer",
@@ -106,7 +106,7 @@ let app = new Vue({
         link: "",
         download: "files/hvz.zip",
         code: "",
-        tags: "game"
+        tags: "simulation"
       },
       /*"Birds With Wheels" : {
         name:"",
