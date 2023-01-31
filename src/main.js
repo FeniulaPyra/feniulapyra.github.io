@@ -7,7 +7,7 @@ let app = new Vue({
         description: `A farming simulation game with a unique growth mechanic that allows 
                       crops to spread to other tiles and hybridize with other nearby crops.`,
         img: "mushrune.png",
-        link: "",
+        link: "https://mushrunegame.itch.io/mushrune",
         download: "mushrune.zip",
         code: "",
         tags: "game"
