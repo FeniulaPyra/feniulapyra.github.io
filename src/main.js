@@ -5,11 +5,41 @@ let app = new Vue({
       Mushrune: {
         name:"Mushrune",
         description: `A farming simulation game with a unique growth mechanic that allows 
-                      crops to spread to other tiles and hybridize with other nearby crops.`,
+                      crops to spread to other tiles and hybridize with other nearby crops. Made in Unity
+                      with a team of 2-4.`,
         img: "mushrune.png",
         link: "https://mushrunegame.itch.io/mushrune",
         download: "mushrune.zip",
         code: "",
+        tags: "game"
+      },
+      "HvZ" : {
+        name: "HvZ",
+        description: `A simulation in Unity for zombies (cats) chasing and converting humans (ducks) 
+                      demonstrating the evasion and pursuit of autonomous agents.`,
+        img: "hvz.png",
+        link: "",
+        download: "files/hvz.zip",
+        code: "https://github.com/FeniulaPyra/hvz",
+        tags: "simulation"
+      },
+      "Birds With Wheels" : {
+        name:"Birds with Wheels",
+        description:`A silly tower defense game where players must place towers (birds with wheels) 
+        to defend a giant golden wheel from being stolen from enemies (wheels with birds). Made in Unity with a team of 5 people.`,
+        img: "",
+        link: "",
+        download: "",
+        code: "https://github.com/vg1566/birds-with-wheels",
+        tags: "game"
+      },
+      "Highway 115" : {
+        name:"Highway115",
+        description:`A unique rhythm-rpg set in the world of Birds with Wheels. Made in Unity with a team of 5 people.`,
+        img: "",
+        link: "",
+        download: "",
+        code: "https://github.com/EricDelmonico/Highway115",
         tags: "game"
       },
       "Plant World Generator" : {
@@ -48,7 +78,7 @@ let app = new Vue({
       "RPS: The Odyssey" : {
         name: "RPS: The Odyssey",
         description: `A platformer where the main form of combat is 
-                      rock-paper-scissors-lizard-spock. Made with a group. Written
+                      rock-paper-scissors-lizard-spock. Made with a group of 4 people. Written
                       in C# and uses monogame.`,
         img: "rps-the-odyssey.png",
         link: "",
@@ -71,7 +101,7 @@ let app = new Vue({
         name: "Disney Tsum Tsum Search",
         description: `A website that finds characters from the mobile game, 
                       "Disney Tsum Tsum", using tags picked by the user. Uses Ajax 
-                      HTML requests paired with the CORS-Anywhere and Wikia API.`,
+                      HTML requests to the Wikia API.`,
         img: "disney-tsum-tsum-pic.PNG",
         link: "https://people.rit.edu/lep2738/tsum-searcher/index.html",
         download: "",
@@ -90,33 +120,14 @@ let app = new Vue({
       },
       "That's The Tea" : {
         name: "That's The Tea",
-        description: `A work in progress social card game where players must make the best 
-                     tea out of the strangest ingredients.`,
+        description: `A social card game where players must make the best 
+                     tea out of the strangest ingredients. Made in Tabletop Simulator with a team of 6 people.`,
         img: "thats-the-tea.png",
         link: "",
         download: "files/thats-the-tea.zip",
         code: "",
         tags: "game"
       },
-      "HvZ" : {
-        name: "HvZ",
-        description: `A simulation for zombies(cats) chasing and converting humans(ducks) 
-                      demonstrating the evasion and pursuit of autonomous agents.`,
-        img: "hvz.png",
-        link: "",
-        download: "files/hvz.zip",
-        code: "",
-        tags: "simulation"
-      },
-      /*"Birds With Wheels" : {
-        name:"",
-        description:"",
-        img: "",
-        link: "",
-        download: "",
-        code: "",
-        tags: "game"
-      },*/
       "Portal 2 Levels: Teaching Tractor Beams" : {
         name: "Portal 2 Levels: Teaching Tractor Beams",
         description:"A series of three Portal 2 Levels designed to introduce new Portal 2 players to the tractor beam mechanic.",

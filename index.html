@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Lars Puglise</title>
+    <title>Lauren Puglise Portfolio</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/portfolio-css.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="src/loader.js" type="module"></script>
+    <script src="https://feniulapyra.github.io/src/loader.js" type="module"></script>
   </head>
   <body>
     <div id="topbar">
-      <header><img src="imgs/my_logo.svg"><h1>Lars Puglise</h1></header>
+      <header><img src="imgs/my_logo.svg"><h1>Lauren Puglise</h1></header>
       <nav id="desktopNav">
         <a href="#aboutL">About Me</a>
         <a href="#galleryL">Gallery</a>
@@ -35,44 +35,16 @@
       <section id="about">
         <img src="imgs/lars.jpeg">
         <p>
-          Hi there! I'm Lauren Puglise, but you can call me Lars! I'm recently graduated 
+          Hello! I'm Lauren Puglise, but you can call me Lars! I'm recently graduated 
           Game Design and Development student who works with JavaScript, 
-          C#, Java, SQL and lots more! I've wanted to develop games since I 
+          C#, Java, SQL and lots more! I've wanted to develop games and simulations since I 
           was about 9 years old, and I've more recently discovered a passion 
           for front-end web development. I'm currently working on my Disney
           Tsum Tsum searcher website, and a game about soup!
         </p>
       </section>
 
-      <br>
-      <h2 id="galleryL">Gallery</h2>
-      <section id="projectInfo">
-
-        <div id="gallerySelection">
-          <span v-for="project in projects">
-            <input type="radio" name="project" 
-                   v-bind:value="project.name" 
-                   v-bind:id="project.name.replace(' ', '')"
-                   v-model="selected">
-            <label v-bind:for="project.name.replace(' ', '')"><img v-bind:src="'imgs/' + project.img"></label>
-          </span>
-        </div>
-
-        <p id="projectImg" v-bind:style="'background-image: url(imgs/' + projects[selected].img + ')'">
-        <h3>{{projects[selected].name}}</h3>
-        <p>
-          {{projects[selected].description}}
-          <br>
-          <br>
-          <a v-bind:href="projects[selected].link" v-if="projects[selected].link != ''">Visit!</a>
-          <a v-bind:href="projects[selected].download" download v-if="projects[selected].download != ''">Download!</a>
-          <br>
-          <a v-bind:href="projects[selected].code" v-if="projects[selected].code != ''">View the Code!</a>
-        </p>
-      </section>
-
-      <br>
-      <h2 id="skillsL">Skills</h2>
+      <br><h2 id="skillsL">Skills</h2>
       <section id="skills">
         <div id="langs">
           <h3>Languages</h3>
@@ -112,14 +84,42 @@
             <li>WebAudio API</li>
             <li>PixiJS</li>
             <li>MediaWiki</li>
-            <li>MatterJS</li>
-            <li>Mapbox</li>
             <li>Monogame</li>
           </ul>
         </div>
 
         <br>
       </section>
+      <br>
+      <h2 id="galleryL">Gallery</h2>
+      <section id="projectInfo">
+
+        <!--div id="gallerySelection">
+          <span v-for="project in projects">
+            <input type="radio" name="project" 
+                   v-bind:value="project.name" 
+                   v-bind:id="project.name.replace(' ', '')"
+                   v-model="selected">
+            <label v-bind:for="project.name.replace(' ', '')"><img v-bind:src="'imgs/' + project.img"></label>
+          </span>
+        </div-->
+        <div v-bind:class="'project ' + ['left', 'right'][j%2]" v-for="(i,j) in Object.keys(projects)" v-bind:id="projects[i].name">
+          
+          <img id="projectImg" v-bind:src="'imgs/' + projects[i].img" v-bind:alt="'screenshot of' + projects[i].name">
+          <!--p id="projectImg" v-bind:style="'background-image: url(imgs/' + project.img + ')'"-->
+          <h3>{{projects[i].name}}</h3>
+          <p>
+            {{projects[i].description}}
+            <br>
+            <br>
+            <a v-bind:href="projects[i].link" v-if="projects[i].link != ''">Visit!</a>
+            <a v-bind:href="projects[i].download" download v-if="projects[i].download != ''">Download!</a>
+            <br>
+            <a v-bind:href="projects[i].code" v-if="projects[i].code != ''">View the Code!</a>
+          </p>
+        </div>
+      </section>
+
       <br>
       <h2 id="contactL">Contact</h2>
       <section id="contact">
