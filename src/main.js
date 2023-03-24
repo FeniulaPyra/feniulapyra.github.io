@@ -27,7 +27,7 @@ let app = new Vue({
         name:"Birds with Wheels",
         description:`A silly tower defense game where players must place towers (birds with wheels) 
         to defend a giant golden wheel from being stolen from enemies (wheels with birds). Made in Unity with a team of 5 people.`,
-        img: "",
+        img: "birdswithwheels.png",
         link: "",
         download: "",
         code: "https://github.com/vg1566/birds-with-wheels",
@@ -36,7 +36,7 @@ let app = new Vue({
       "Highway 115" : {
         name:"Highway115",
         description:`A unique rhythm-rpg set in the world of Birds with Wheels. Made in Unity with a team of 5 people.`,
-        img: "",
+        img: "highway115.PNG",
         link: "",
         download: "",
         code: "https://github.com/EricDelmonico/Highway115",
